@@ -120,6 +120,23 @@
                 <dd>Prueba nuestro cachopo acompañado de una buena sidra natural</dd>
             </dl>
         </aside>
+
+        <button id="abrir">Reservar mesa</button>
+        <dialog id="ventana">
+            <h3>Solicitud de reserva</h3>
+            <ul>
+                <li>Máximo 8 personas por mesa</li>
+                <li>Llegada con antelación</li>
+                <li>Confirmar asistencia con 24h de antelación</li>
+            </ul>
+            <button id="cerrar">Cerrar</button>
+        </dialog>
+
+        <script>
+            const dialog = document.getElementById('ventana');
+            document.getElementById('abrir').onclick = () => dialog.showModal();
+            document.getElementById('cerrar').onclick = () => dialog.close();
+        </script>
     </main>
 </body>
 </html>
